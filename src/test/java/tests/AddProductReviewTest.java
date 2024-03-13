@@ -21,13 +21,13 @@ public class AddProductReviewTest extends TestBase {
 	SearchPage  searchobject ;
 	ProductDetailPage detailObject ;
 	AddProductReviewPage reviewObject ;
-	UserRegistrationpage registerPageobject;
+	
 	
 	
 		
 		//1- Search product 
 		
-		@Test(priority = 4)
+		@Test(priority = 1)
 		public void UserSearchForProduct() 
 		{
 			searchobject = new SearchPage(driver);
@@ -36,33 +36,9 @@ public class AddProductReviewTest extends TestBase {
 			Assert.assertEquals(detailObject.productNameh1.getText(),(productName));
 		}
 		
-		@Test(priority = 1)
-		public void UserCanRegisterSuccessfully() 
-		{
-			homePageObject = new HomePage(driver);
-			homePageObject.openRegistrationPage();
-			registerPageobject = new UserRegistrationpage(driver);
-			registerPageobject.UserRegistration("Mimo", "Nounou", email, password);
-			Assert.assertTrue(registerPageobject.successMessage.getText().equals("Your registration completed"));
-		}
-
-		@Test(priority = 2)
-		public void UseContinueLink() 
-		{
-			registerPageobject = new UserRegistrationpage(driver);
-			registerPageobject.Continue();
-		}
-
-		@Test(priority = 3)
-		public void UserCanLogin() 
-		{
-			homePageObject.openLoginpage();
-			loginObject = new LoginPage(driver);
-			loginObject.UserLogin(email, password);
-		}
 		
-		// 3- Add product review
-		@Test(priority = 5)
+		// 2- Add product review
+		@Test(priority = 2)
 		public void UserCanAddReview() 
 		{
 			detailObject = new ProductDetailPage(driver);
