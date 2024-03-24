@@ -18,10 +18,9 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import io.cucumber.testng.AbstractTestNGCucumberTests;
 import utilities.Helper;
 
-public class TestBase  extends AbstractTestNGCucumberTests{
+public class TestBase  {
 
 	public static WebDriver driver ;
 	
@@ -87,7 +86,7 @@ public class TestBase  extends AbstractTestNGCucumberTests{
 	@AfterSuite
 	public void stopDriver() 
 	{
-	    driver.quit();
+	    //driver.quit();
 	}
 	
 	//take screenshot when testcase fails and add it to the screenshots folder
