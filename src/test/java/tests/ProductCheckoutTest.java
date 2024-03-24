@@ -29,7 +29,7 @@ public class ProductCheckoutTest extends TestBase{
 	{
 		searchobject = new SearchPage(driver);
 		detailobject = new ProductDetailPage(driver);
-		searchobject.ProductsearchUsingautoSuggest("Mac");
+		//searchobject.ProductsearchUsingautoSuggest("Mac");
 		Assert.assertEquals(detailobject.productNameh1.getText(),productName1);
 		detailobject.addProductToCart();
 	}

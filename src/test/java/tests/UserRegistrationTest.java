@@ -12,7 +12,7 @@ public class UserRegistrationTest extends TestBase{
 	HomePage homePageObject ;
 	UserRegistrationpage registerPageObject ;
 	LoginPage loginObject;
-	String email = "udemy19@test.com";
+	String email = "udemy1@test.com";
 
 
 	@Test(priority = 1)

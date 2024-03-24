@@ -18,7 +18,7 @@ public class MyAccountTest extends TestBase{
 	String newPassword = "87654321";
 	String firstName = "Mimo";
 	String lastName = "Nounou";
-	String email = "udemy19@test.com";
+	String email = "udemy1@test.com";
 
 
 	
